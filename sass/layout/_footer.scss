@@ -3,7 +3,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer__list {
+
+.footer-container {
   display: flex;
 }
 
@@ -46,15 +47,14 @@
     transition: color 250ms linear;
     &:hover,
     &:focus {
-    color: var(--accent-color);
+      color: var(--accent-color);
+    }
   }
 }
 
 .adress-footer {
   padding-top: 20px;
 }
-
-
 
 // СОЦ СЕТИ
 

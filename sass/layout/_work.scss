@@ -38,3 +38,11 @@
   letter-spacing: 0.03em;
   padding: 27px;
 }
+@media screen and (max-width: 1199px) {
+  .section-work {
+    visibility: hidden;
+    margin: 0;
+    padding: 0;
+    height: 0;
+  }
+}

@@ -132,6 +132,7 @@
 .connect-item__link {
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
   }
   font-weight: 500;
   font-size: 14px;

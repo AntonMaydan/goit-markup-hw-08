@@ -70,6 +70,9 @@
 }
 
 .project-title {
+  @media screen and (min-width: 1200px) {
+    margin-left: 24px;
+  }
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
@@ -78,6 +81,9 @@
 }
 
 .project-text {
+  @media screen and (min-width: 1200px) {
+    margin-left: 24px;
+  }
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;

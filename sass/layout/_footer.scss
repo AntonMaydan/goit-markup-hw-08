@@ -4,6 +4,8 @@
   padding-bottom: 60px;
   @media screen and (min-width: 1200px) {
     padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -20,8 +22,9 @@
     margin-right: 165px;
   }
   @media screen and (min-width: 1200px) {
+    margin-left: auto;
+    margin-top: 60px;
     margin-right: 70px;
-    margin-top: 68px;
   }
 }
 
@@ -29,6 +32,9 @@
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+  }
+  @media screen and (min-width: 1200px) {
+    text-align: left;
   }
 }
 
@@ -144,8 +150,8 @@
 // ONLINE
 .online__subscription {
   @media screen and (min-width: 1200px) {
-    margin-left: 23px;
-    margin-top: 80px;
+    margin-left: 60px;
+    margin-top: 72px;
   }
 }
 

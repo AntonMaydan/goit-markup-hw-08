@@ -501,7 +501,6 @@ body {
 @media screen and (min-width: 768px) {
   .connect_list {
     display: block;
-    margin-left: 93px;
   }
 }
 
@@ -510,6 +509,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    text-align: right;
   }
 }
 
@@ -520,11 +520,14 @@ body {
 @media screen and (min-width: 768px) {
   .connect-item {
     display: block;
+    text-align: right;
   }
 }
 
-.connect-item {
-  margin-right: 50px;
+@media screen and (min-width: 1200px) {
+  .connect-item:not(:last-child) {
+    margin-right: 50px;
+  }
 }
 
 .connect-item__link {
@@ -537,6 +540,12 @@ body {
   transition: color 250ms linear;
   -webkit-transition: cubic-bezier(0.4, 0, 0.2, 1);
   transition: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .connect-item__link {
+    margin-right: 0;
+  }
 }
 
 .connect-item__link:hover {
@@ -705,6 +714,9 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-deks-1x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-deks-1x.jpg);
   }
@@ -714,8 +726,6 @@ body {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-deks-2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-deks-2x.jpg);
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 }
 
@@ -1161,6 +1171,12 @@ body {
   transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (min-width: 1200px) {
+  .clients-list__block {
+    height: 90px;
+  }
+}
+
 .clients-list__block:hover, .clients-list__block:focus {
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
@@ -1186,6 +1202,8 @@ body {
 @media screen and (min-width: 1200px) {
   .footer {
     padding-top: 0;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -1210,8 +1228,9 @@ body {
 
 @media screen and (min-width: 1200px) {
   .footer-item:not(:last-child) {
+    margin-left: auto;
+    margin-top: 60px;
     margin-right: 70px;
-    margin-top: 68px;
   }
 }
 
@@ -1223,6 +1242,12 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .foter-tab {
+    text-align: left;
   }
 }
 
@@ -1349,8 +1374,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .online__subscription {
-    margin-left: 23px;
-    margin-top: 80px;
+    margin-left: 60px;
+    margin-top: 72px;
   }
 }
 
@@ -1710,11 +1735,23 @@ body {
   color: var(--second-text-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .project-title {
+    margin-left: 24px;
+  }
+}
+
 .project-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   margin-top: 4px;
+}
+
+@media screen and (min-width: 1200px) {
+  .project-text {
+    margin-left: 24px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

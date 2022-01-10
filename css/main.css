@@ -509,7 +509,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    text-align: right;
   }
 }
 
@@ -520,7 +519,6 @@ body {
 @media screen and (min-width: 768px) {
   .connect-item {
     display: block;
-    text-align: right;
   }
 }
 
@@ -544,7 +542,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .connect-item__link {
-    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 

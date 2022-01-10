@@ -1,5 +1,15 @@
 .header {
   border-bottom: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+    padding: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .header-container {
@@ -22,7 +32,10 @@
 }
 
 .logo__text {
-  margin-right: 92px;
+  margin-right: 88px;
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+  }
 }
 
 .logo__span {
@@ -30,11 +43,19 @@
 }
 
 .site-nav {
-  display: flex;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
 }
 
-.site-nav__item:not(:last-child) {
+.site-nav__item {
   margin-right: 50px;
+  @media screen and (min-width: 1200px) {
+    .site-nav__item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .site-nav__link {
@@ -58,26 +79,28 @@
 .site-nav__link--index {
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.33;
-  letter-spacing: 0.02em;
-  color: var(--header-text-color);
-  padding-top: 27px;
-  padding-bottom: 37px;
-  display: block;
-  transition: color 250ms linear;
-  position: relative;
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
-  &::after {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background: #2196f3;
-    border-radius: 2px;
-    position: absolute;
+  @media screen and (min-width: 768px) {
+    letter-spacing: 0.02em;
+    color: var(--header-text-color);
+    padding-top: 27px;
+    padding-bottom: 37px;
     display: block;
-    bottom: 0;
-    left: 0;
+    transition: color 250ms linear;
+    position: relative;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      background: #2196f3;
+      border-radius: 2px;
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: 0;
+    }
   }
+  line-height: 1.33;
 }
 
 .connect {
@@ -87,9 +110,21 @@
 
 .connect_list {
   margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 93px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
-
-.connect-item:not(:last-child) {
+.connect-item {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.connect-item {
   margin-right: 50px;
 }
 
@@ -112,5 +147,114 @@
   .connect-item__link:focus &,
   .connect-item__link:hover & {
     fill: #2196f3;
+  }
+}
+
+.mod-menu {
+  position: fixed;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.mod-menu-item {
+  &:not(:last-child) {
+    margin-bottom: 34px;
+  }
+}
+.open-menu-btn {
+  margin-left: auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-btn {
+  transition: fill 250ms linear;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: #2196f3;
+  }
+}
+
+.close-menu-btn {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
+  margin-right: 25px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.close-menu-icon {
+  transition: fill 250ms linear;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: #2196f3;
+  }
+}
+
+.mod-menu-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 47px;
+  letter-spacing: 0.02em;
+  color: #212121;
+}
+
+.mod-menu-color {
+  color: #2196f3;
+}
+
+.mod-menu-contact {
+  margin-top: 302px;
+}
+
+.mod-menu-nomber {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.mod-menu-adress {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+  color: #757575;
+}
+
+.mod-menu-connect {
+  margin-bottom: 32px;
+}
+
+.mod-social-list {
+  display: flex;
+  margin-top: 64px;
+  margin-bottom: 46px;
+}
+
+.mod-social-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
+
+.mod-social-item {
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 }
